@@ -7,5 +7,5 @@ import com.zopa.quotefinder.valueobject.QuoteDetails;
 
 public interface QuotefinderService {
 
-	public QuoteDetails getLowestLenderQuote(String loanAmount, List<LenderDetails> lenderDetailsList);
+	public QuoteDetails getLowestRateLenderQuote(String loanAmount, List<LenderDetails> lenderDetailsList);
 }

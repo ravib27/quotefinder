@@ -22,7 +22,7 @@ public class QuotefinderController {
 	@GetMapping(value = "/zopaRate/{loanAmount}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public QuoteDetails getZopaLenderQuote(@PathVariable String loanAmount, @RequestBody List<LenderDetails> lenderDetailsList) {
 		
-		return quotefinderService.getLowestLenderQuote(loanAmount, lenderDetailsList);
+		return quotefinderService.getLowestRateLenderQuote(loanAmount, lenderDetailsList);
 	}
 	
 }

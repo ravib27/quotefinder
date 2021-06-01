@@ -24,7 +24,7 @@ public class QuotefinderServiceImpl implements QuotefinderService {
 	private int MONTHS_IN_YEAR = 12;
 	private int LOAN_TENURE_IN_YEARS = 3;
 
-	public QuoteDetails getLowestLenderQuote(String loanAmount, List<LenderDetails> lenderDetailsList) 
+	public QuoteDetails getLowestRateLenderQuote(String loanAmount, List<LenderDetails> lenderDetailsList) 
 	{		
 		BigDecimal principalLoanAmtRequested = BigDecimal.ZERO;
 	
