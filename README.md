@@ -8,18 +8,7 @@ Once the application is up and running, following endpoint should be used from P
 
 It makes a post request with request body where the input lender details shall be provided as json content like below:
 
-[  
-      {  
-         "name":"Jane",
-         "rate":"0.069",
-         "availableAmount":"480"
-      },
-			{  
-         "name":"Fred",
-         "rate":"0.071",
-         "availableAmount":"520"
-      }
-]
+[{"name":"Jane","rate":"0.069","availableAmount":"480"},{"name":"Fred","rate":"0.071","availableAmount":"520"}]
 
 The response would be available as below json content:
 
