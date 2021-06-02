@@ -145,8 +145,7 @@ public class QuotefinderServiceImpl implements QuotefinderService {
 	
 		// M = P [{r*(1+r)^n}/{(1+r)^n – 1}]
 	    
-		//BigDecimal upperPartExpo = (BigDecimal.ONE.add(monthlyIntRate)).pow(loanTenureInMonths.intValue());
-	    BigDecimal dividend = principalLoanAmtRequested.multiply(monthlyIntRate.multiply((BigDecimal.ONE.add(monthlyIntRate)).pow(loanTenureInMonths.intValue())));
+		BigDecimal dividend = principalLoanAmtRequested.multiply(monthlyIntRate.multiply((BigDecimal.ONE.add(monthlyIntRate)).pow(loanTenureInMonths.intValue())));
 	    BigDecimal divisor = ((BigDecimal.ONE.add(monthlyIntRate)).pow(loanTenureInMonths.intValue())).subtract(BigDecimal.ONE);
 	    BigDecimal monthlyPayment = dividend.divide(divisor, 2, RoundingMode.HALF_UP);
 	    
