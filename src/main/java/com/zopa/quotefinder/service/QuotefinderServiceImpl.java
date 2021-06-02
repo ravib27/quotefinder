@@ -24,15 +24,16 @@ public class QuotefinderServiceImpl implements QuotefinderService {
 	private int MONTHS_IN_YEAR = 12;
 	private int LOAN_TENURE_IN_YEARS = 3;
 
+	@Override
 	public QuoteDetails getLowestRateLenderQuote(String loanAmount, List<LenderDetails> lenderDetailsList) 
 	{		
 		BigDecimal principalLoanAmtRequested = BigDecimal.ZERO;
 	
 		String message = "";
-		String requestedAmount = "£" + "0.00";
-		String annualInterestRate = "0.0";
-		String monthlyRepayment = "£" + "0.00";
-		String totalRepayment = "£" + "0.00";
+		String requestedAmount = "NA";
+		String annualInterestRate = "NA";
+		String monthlyRepayment = "NA";
+		String totalRepayment = "NA";
 		
 		try {
 			principalLoanAmtRequested = loanAmount != null && !loanAmount.equals("") ? new BigDecimal(loanAmount) : BigDecimal.ZERO;
@@ -67,7 +68,7 @@ public class QuotefinderServiceImpl implements QuotefinderService {
 			    requestedAmount = "£" + principalLoanAmtRequested;
 				annualInterestRate = annualIntRate + "%";
 				monthlyRepayment = "£" + monthlyPayment;
-				totalRepayment = "£" + monthlyPayment.multiply(loanTenureInMonths).setScale(2, RoundingMode.HALF_UP);
+				totalRepayment = "\u00a3" + monthlyPayment.multiply(loanTenureInMonths).setScale(2, RoundingMode.HALF_UP);
 				
 				logger.info("Requested Amount: " + requestedAmount);
 				logger.info("Annual Interest Rate: " + annualInterestRate);

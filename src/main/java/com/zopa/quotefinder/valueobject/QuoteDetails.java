@@ -2,11 +2,11 @@ package com.zopa.quotefinder.valueobject;
 
 public class QuoteDetails {
 
-	private final String message;
-	private final String requestedAmt;
-	private final String annualIntRate;
-	private final String monthlyRepaymentAmt;
-	private final String totalRepaymentAmt;
+	private String message;
+	private String requestedAmt;
+	private String annualIntRate;
+	private String monthlyRepaymentAmt;
+	private String totalRepaymentAmt;
 	
 	public QuoteDetails(String message, String requestedAmt, String annualIntRate, String monthlyRepaymentAmt, String totalRepaymentAmt) {
 		this.message = message;
